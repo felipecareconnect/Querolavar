@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seja um Franqueado | Quero Lavar</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Quero Lavar</a>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">Sobre</a></li>
+            <li><a href="services.html" class="nav-link">Serviços</a></li>
+            <li><a href="franchise.html" class="nav-link active">Franquia</a></li>
+            <li><a href="contact.html" class="nav-link">Contato</a></li>
+        </ul>
+    </header>
+
+    <section class="hero-simple" style="background: linear-gradient(135deg, var(--purple), var(--primary));">
+        <h1>Abra Sua Franquia Quero Lavar</h1>
+        <p>A rentabilidade do mercado self-service na sua região</p>
+    </section>
+
+    <section class="section-padding reveal" style="max-width: 600px;">
+        <h2 style="text-align: center; margin-bottom: 30px;">Receber Apresentação da Franquia</h2>
+        <form id="franchiseForm">
+            <div class="form-group">
+                <label>Nome Completo *</label>
+                <input type="text" id="fran-nome" class="form-input" required>
+            </div>
+            <div class="form-group">
+                <label>Telefone *</label>
+                <input type="tel" id="fran-tel" class="form-input" placeholder="(11) 99999-9999" required>
+            </div>
+            <div class="form-group">
+                <label>Email *</label>
+                <input type="email" id="fran-email" class="form-input" required>
+            </div>
+            <div class="form-group">
+                <label>Cidade/Estado *</label>
+                <input type="text" id="fran-cidade" class="form-input" required>
+            </div>
+            <div class="form-group">
+                <label>Mensagem</label>
+                <textarea id="fran-msg" class="form-input" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn-secondary" style="width: 100%;">Enviar Consulta via WhatsApp</button>
+        </form>
+    </section>
+
+    <footer class="footer"><p style="text-align: center;">&copy; 2026 Quero Lavar. Todos os direitos reservados.</p></footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
