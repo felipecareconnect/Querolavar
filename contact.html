@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Quero Lavar</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Quero Lavar</a>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">Sobre</a></li>
+            <li><a href="services.html" class="nav-link">Serviços</a></li>
+            <li><a href="franchise.html" class="nav-link">Franquia</a></li>
+            <li><a href="contact.html" class="nav-link active">Contato</a></li>
+        </ul>
+    </header>
+
+    <section class="hero-simple" style="background: linear-gradient(135deg, var(--green), var(--cyan));">
+        <h1>Fale Conosco</h1>
+        <p>Estamos prontos para atender você e retirar suas dúvidas</p>
+    </section>
+
+    <section class="section-padding reveal" style="max-width: 600px;">
+        <form id="contactForm">
+            <div class="form-group">
+                <label>Nome *</label>
+                <input type="text" id="ct-nome" class="form-input" required>
+            </div>
+            <div class="form-group">
+                <label>Email *</label>
+                <input type="email" id="ct-email" class="form-input" required>
+            </div>
+            <div class="form-group">
+                <label>Assunto *</label>
+                <input type="text" id="ct-assunto" class="form-input" required>
+            </div>
+            <div class="form-group">
+                <label>Mensagem *</label>
+                <textarea id="ct-msg" class="form-input" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar via WhatsApp</button>
+        </form>
+    </section>
+
+    <div style="width: 100%; height: 400px; filter: grayscale(20%);">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14628.536733220536!2d-46.6333!3d-23.5505!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzAxLjgiUyA0NsKwMzcnNTkuOCJX!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <footer class="footer"><p style="text-align: center;">&copy; 2026 Quero Lavar. Todos os direitos reservados.</p></footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
