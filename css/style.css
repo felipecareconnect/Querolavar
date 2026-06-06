@@ -1,0 +1,278 @@
+/* @import das fontes especificadas */
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&display=swap');
+@import url('https://fonts.cdnfonts.com/css/aeonik-pro'); /* Fallback direto via Google Fonts para aproximação ou local */
+
+:root {
+    --primary: #0066FF;
+    --purple: #7C3AED;
+    --cyan: #06B6D4;
+    --green: #10B981;
+    --dark: #1F2937;
+    --white: #FFFFFF;
+    --gray-light: #F3F4F6;
+    
+    --font-heading: 'Aeonik Pro', 'Arial', sans-serif;
+    --font-body: 'Geist', 'Arial', sans-serif;
+    
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --transition: 0.3s ease-in-out;
+}
+
+/* Reset Moderno */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--dark);
+    background-color: var(--white);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Classes de Animação (Intersection Observer) */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Componente: Header Fixo */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(254, 254, 254, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 800;
+    background: linear-gradient(to right, var(--primary), var(--cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary);
+}
+
+.btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--cyan));
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 102, 255, 0.4);
+}
+
+.btn-secondary {
+    background: var(--purple);
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(124, 58, 237, 0.4);
+}
+
+.btn-success {
+    background: var(--green);
+    color: var(--white);
+}
+
+/* Menu Mobile (Hamburger) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--dark);
+    transition: var(--transition);
+}
+
+/* Footer Global */
+.footer {
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 60px 40px 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 100% / 4); /* Evita quebra abrupta */
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media(max-width: 1024px) {
+    .footer-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media(max-width: 768px) {
+    .footer-grid { grid-template-columns: 1fr; }
+    .hamburger { display: flex; }
+    .nav-menu {
+        position: absolute;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: var(--white);
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+        transition: var(--transition);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .nav-menu.active { left: 0; }
+    .header .btn { display: none; } /* Oculta CTA no header em mobile */
+}
+
+/* Seções de Layout Comuns */
+.section-padding {
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-simple {
+    padding: 120px 40px 60px;
+    text-align: center;
+    color: var(--white);
+}
+
+/* Toast Notification */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--dark);
+    color: var(--white);
+    padding: 16px 32px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transform: translateY(100px);
+    opacity: 0;
+    transition: var(--transition);
+    z-index: 2000;
+}
+
+.toast.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Modais / Lightbox */
+.lightbox-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; pointer-events: none;
+    transition: var(--transition);
+    z-index: 3000;
+}
+.lightbox-modal.active { opacity: 1; pointer-events: auto; }
+.lightbox-content { max-width: 80%; max-height: 80%; border-radius: 12px; }
+.lightbox-close { position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; cursor: pointer; }
+
+/* Grid de Cards Único para Estilização */
+.card-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.card-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+@media (max-width: 992px) {
+    .card-grid-3 { grid-template-columns: repeat(2, 1fr); }
+    .card-grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 576px) {
+    .card-grid-3, .card-grid-4 { grid-template-columns: 1fr; }
+}
+
+.premium-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+.premium-card:hover {
+    transform: translateY(-5px);
+    border-left: 4px solid var(--primary);
+}
+
+/* Estilos de inputs */
+.form-group { margin-bottom: 20px; }
+.form-input {
+    width: 100%; padding: 14px; border: 1px solid #E5E7EB;
+    border-radius: 8px; font-family: var(--font-body); outline: none;
+    transition: var(--transition);
+}
+.form-input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(0,102,255,0.15); }
