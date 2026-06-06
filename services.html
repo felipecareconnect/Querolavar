@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços e Preços | Quero Lavar</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        table { width: 100%; border-collapse: collapse; margin-top: 30px; box-shadow: var(--shadow); border-radius: 12px; overflow: hidden; }
+        th, td { padding: 18px; text-align: left; border-bottom: 1px solid #E5E7EB; }
+        th { background-color: var(--primary); color: white; }
+        tr:nth-child(even) { background-color: #F9FAFB; }
+        .accordion-item { border-bottom: 1px solid #E5E7EB; padding: 15px 0; }
+        .accordion-header { font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; }
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; color: #6B7280; padding-top: 5px; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Quero Lavar</a>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">Sobre</a></li>
+            <li><a href="services.html" class="nav-link active">Serviços</a></li>
+            <li><a href="franchise.html" class="nav-link">Franquia</a></li>
+            <li><a href="contact.html" class="nav-link">Contato</a></li>
+        </ul>
+        <a href="services.html" class="btn btn-primary">Lavar Agora</a>
+    </header>
+
+    <section class="hero-simple" style="background: linear-gradient(135deg, var(--cyan), var(--green));">
+        <h1>Nossos Serviços</h1>
+        <p>Soluções completas para sua limpeza diária</p>
+    </section>
+
+    <section class="section-padding reveal">
+        <h2>Máquina de Casa vs Quero Lavar</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Recurso</th>
+                    <th>Máquina de Casa</th>
+                    <th>Quero Lavar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Tempo de Lavagem</td><td>1h 30min</td><td>30 min</td></tr>
+                <tr><td>Produtos Inclusos</td><td>Não (Custo extra)</td><td>Sim (OMO® e Comfort®)</td></tr>
+                <tr><td>Capacidade Industrial</td><td>Não</td><td>Sim (Até 10kg por ciclo)</td></tr>
+                <tr><td>Secagem Imediata</td><td>Rara / Demorada</td><td>Sim (Pronto em 30 min)</td></tr>
+                <tr><td>Consumo de Energia</td><td>Alto individual</td><td>Eco-Sustentável otimizado</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="section-padding reveal">
+        <h2 style="text-align:center; margin-bottom: 30px;">Perguntas Frequentes</h2>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div class="accordion-item">
+                <div class="accordion-header">Preciso levar sabão? <span>+</span></div>
+                <div class="accordion-content"><p>Não! O sabão profissional OMO® e o amaciante Comfort® já são dosados e injetados automaticamente em todas as máquinas durante o ciclo.</p></div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">Como realizo o pagamento? <span>+</span></div>
+                <div class="accordion-content"><p>Nosso totem aceita cartões de débito, crédito, aproximação e PIX de forma rápida e segura.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer"><p style="text-align: center;">&copy; 2026 Quero Lavar. Todos os direitos reservados.</p></footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
